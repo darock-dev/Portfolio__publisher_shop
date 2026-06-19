@@ -77,3 +77,20 @@ button {
   display: flex;
   justify-content: center;
 }
+.top-menu {
+  display: flex;
+  gap: 100px;
+  padding: 50px 0;
+  justify-content: center;
+}
+.top-menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  font-weight: 500;
+}
+.top-menu-item img {
+  width: 100px;
+  height: auto;
+}
