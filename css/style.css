@@ -215,22 +215,24 @@ button {
 }
 
 /* prod-list */
-.prod-list-menu {
+.prod-list {
+  width: 100%;
+}
+.prod-tabmenu {
   width: 100%;
   padding: 20px 0;
   display: flex;
   align-items: center;
-  justify-content: 30px;
   color: #777;
   gap: 52px;
   border-bottom: 1px solid #eaeaea;
   margin-bottom: 20px;
   font-size: 18px;
 }
-.prod-list-menu-item {
+.prod-tabmenu-item {
   cursor: pointer;
 }
-.prod-list-menu-item.active {
+.prod-tabmenu-item.active {
   color: #000;
   font-weight: 500;
 }

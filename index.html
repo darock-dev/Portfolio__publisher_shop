@@ -20,11 +20,11 @@
         </div>
         <nav class="nav">
           <ul>
-            <li><a href="#">BEST</a></li>
-            <li><a href="#">패브릭</a></li>
-            <li><a href="#">수납</a></li>
-            <li><a href="#">가구</a></li>
-            <li><a href="#">문구</a></li>
+            <li><a href="#best-item-sec">BEST</a></li>
+            <li><a href="#prod-list-sec" data-category="fabric">패브릭</a></li>
+            <li><a href="#prod-list-sec" data-category="storage">수납</a></li>
+            <li><a href="#prod-list-sec" data-category="furniture">가구</a></li>
+            <li><a href="#prod-list-sec" data-category="stationery">문구</a></li>
           </ul>
         </nav>
       </div>
@@ -45,25 +45,25 @@
     <section>
       <ul class="top-menu">
         <li>
-          <a href="#" class="top-menu-item">
+          <a href="#prod-list-sec" class="top-menu-item" data-category="fabric">
             <img src="./images/topmenu/round_p.png" alt="">
             <div>패브릭</div>
           </a>
         </li>
         <li>
-          <a href="#" class="top-menu-item">
+          <a href="#prod-list-sec" class="top-menu-item" data-category="storage">
             <img src="./images/topmenu/round_s.png" alt="">
             <div>수납</div>
           </a>
         </li>
         <li>
-          <a href="#" class="top-menu-item">
+          <a href="#prod-list-sec" class="top-menu-item" data-category="furniture">
             <img src="./images/topmenu/round_g.png" alt="">
             <div>가구</div>
           </a>
         </li>
         <li>
-          <a href="#" class="top-menu-item">
+          <a href="#prod-list-sec" class="top-menu-item" data-category="stationery">
             <img src="./images/topmenu/round_m.png" alt="">
             <div>문구</div>
           </a>
@@ -72,7 +72,7 @@
     </section>
 
     <!-- best item (TODO: Swiper 슬라이드 적용)  -->
-    <section class="section">
+    <section class="section" id="best-item-sec">
       <div class="section-inner">
         <div class="best-item-title">인기상품을 둘러보세요</div>
         <div>
@@ -153,12 +153,12 @@
     </section>
 
     <!-- prod list -->
-    <section class="section">
+    <section class="section" id="prod-list-sec">
       <div class="section-inner">
         <div class="prod-list-wrap">
           <!-- filter -->
           <div class="filter-wrap">
-            <div class="filter-title">전체</div>
+            <div class="filter-title">상품</div>
             <div class="filter-sub-title">검색 필터 설정</div>
             <ul class="filter-accordion">
               <li class="accordion-item">
@@ -202,47 +202,16 @@
             </div>
           </div>
           
-          <!-- prod list (TODO: 추후 JS로 나열) -->
+          <!-- prod list -->
           <div class="prod-list">
-            <ul class="prod-list-menu">
-              <li class="prod-list-menu-item">패브릭</li>
-              <li class="prod-list-menu-item">수납</li>
-              <li class="prod-list-menu-item">가구</li>
-              <li class="prod-list-menu-item">문구</li>
+            <ul class="prod-tabmenu">
+              <li class="prod-tabmenu-item" data-category="all">전체</li>
+              <li class="prod-tabmenu-item" data-category="fabric">패브릭</li>
+              <li class="prod-tabmenu-item" data-category="storage">수납</li>
+              <li class="prod-tabmenu-item" data-category="furniture">가구</li>
+              <li class="prod-tabmenu-item" data-category="stationery">문구</li>
             </ul>
             <ul class="prod-item">
-              <li>
-                <a href="#">
-                  <img src="./images/product/p_05.png" alt="포근한 침대">
-                  <div class="prod-color" style="background-color: white;"></div>
-                  <div class="prod-name">포근한 침대</div>
-                  <div class="prod-price">80,000원</div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="./images/product/p_05.png" alt="포근한 침대">
-                  <div class="prod-color" style="background-color: ivory;"></div>
-                  <div class="prod-name">포근한 침대</div>
-                  <div class="prod-price">80,000원</div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="./images/product/p_05.png" alt="포근한 침대">
-                  <div class="prod-color" style="background-color: lightgray;"></div>
-                  <div class="prod-name">포근한 침대</div>
-                  <div class="prod-price">80,000원</div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="./images/product/p_05.png" alt="포근한 침대">
-                  <div class="prod-color" style="background-color: burlywood;"></div>
-                  <div class="prod-name">포근한 침대</div>
-                  <div class="prod-price">80,000원</div>
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -261,5 +230,7 @@
       </div>
     </div>
   </footer>
+
+  <script src="./js/script.js"></script>
 </body>
 </html>
