@@ -87,10 +87,17 @@ button {
   display: flex;
   justify-content: center;
 }
+.main-visual-swiper {
+  width: 1760px;
+  height: auto;
+}
+.main-visual-swiper-prev, .main-visual-swiper-next {
+  color: white !important;
+}
 .top-menu {
   display: flex;
   gap: 100px;
-  padding: 50px 0;
+  padding-top: 50px;
   justify-content: center;
 }
 .top-menu-item {
@@ -121,7 +128,7 @@ button {
   height: auto;
 }
 .best-item-swiper-prev, .best-item-swiper-next {
-  color: #000 !important;
+  color: white !important;
 }
 .prod-name {
   font-size: 16px;

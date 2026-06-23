@@ -22,6 +22,23 @@ const prodData = [
 ]
 
 /**
+ * 메인비주얼 Swiper
+ */
+const mainVisualSwiper = new Swiper('.main-visual-swiper', {
+  direction: 'horizontal',
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  slidesPerView: 1,
+  spaceBetween: 0,
+  autoplay: {
+    delay: 4000,
+  },
+});
+
+/**
  * 인기상품 Swiper
  */
 const bestItemSwiper = new Swiper('.best-item-swiper', {

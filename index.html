@@ -38,9 +38,28 @@
   </header>
 
   <main>
-    <!-- main visual (TODO: Swiper 슬라이드 적용) -->
+    <!-- main visual -->
     <section class="main-visual">
-      <img src="./images/visual/visual_01.png" alt="메인비주얼01">
+      <div class="swiper main-visual-swiper">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="./images/visual/visual_01.png" alt="패브릭 시리즈">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/visual/visual_02.png" alt="수납박스 시리즈">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/visual/visual_03.png" alt="가구 시리즈">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/visual/visual_04.png" alt="문구 시리즈">
+          </div>
+        </div>
+
+        <div class="swiper-button-prev main-visual-swiper-prev"></div>
+        <div class="swiper-button-next main-visual-swiper-next"></div>
+      </div>
     </section>
 
     <!-- top menu -->
@@ -145,7 +164,7 @@
         <div class="prod-list-wrap">
           <!-- filter -->
           <div class="filter-wrap">
-            <div class="filter-title">상품</div>
+            <div class="filter-title">상품보기</div>
             <div class="filter-sub-title">검색 필터 설정</div>
             <ul class="filter-accordion">
               <li class="accordion-item">
