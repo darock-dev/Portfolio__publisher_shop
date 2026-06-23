@@ -234,3 +234,29 @@ button {
   border: 1px solid #ddd;
   margin-top: 16px;
 }
+
+/* footer */
+#footer {
+  border-top: 1px solid #eaeaea;
+  padding: 24px 0;
+}
+.footer-inner {
+  width: 100%;
+  max-width: 1760px;
+  margin: 0 auto;
+  display: flex;
+}
+.footer-left {
+  display: flex;
+  gap: 20px;
+}
+.footer-right {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-size: 14px;
+  color: #888;
+}
+.footer-logo {
+  opacity: 0.4;
+}
