@@ -215,6 +215,25 @@ button {
 }
 
 /* prod-list */
+.prod-list-menu {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: 30px;
+  color: #777;
+  gap: 52px;
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.prod-list-menu-item {
+  cursor: pointer;
+}
+.prod-list-menu-item.active {
+  color: #000;
+  font-weight: 500;
+}
 .prod-item {
   display: flex;
   flex-wrap: wrap;
