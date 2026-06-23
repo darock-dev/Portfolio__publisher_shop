@@ -178,8 +178,11 @@ button {
   padding: 16px 0;
   border-bottom: 1px solid #000;
 }
-.accordion-desc {
-  /* display: none; */
+.accordion-item .accordion-desc {
+  display: none;
+}
+.accordion-item.active .accordion-desc {
+  display: block;
 }
 .accordion-title {
   display: flex;

@@ -53,6 +53,29 @@ const bestItemSwiper = new Swiper('.best-item-swiper', {
 });
 
 /**
+ * 검색 필터 설정
+ */
+// 아코디언 메뉴 표시/숨김
+const accordionTitles = document.querySelectorAll('.accordion-title');
+accordionTitles.forEach(title => {
+  title.addEventListener('click', () => {
+    const currentItem = title.parentElement;  // 선택된 아코디언메뉴의 부모요소
+    const isActive = currentItem.classList.contains('active');  // 해당 부모요소에서 active 클래스가 있는지 확인
+
+    // 모든 아코디언메뉴 아이템의 active 클래스 초기화
+    const allItems = document.querySelectorAll('.accordion-item');
+    allItems.forEach(item => {
+      item.classList.remove('active');
+    });
+
+    // 선택된 아코디언 메뉴에 active 클래스가 없다면 추가
+    if(!isActive) {
+      currentItem.classList.add('active');
+    }
+  });
+});
+
+/**
  * 상품 목록 표시
  */
 document.addEventListener('DOMContentLoaded', () => {
@@ -89,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
         let htmlContent = '';
   
+        // 필터링된 데이터를 htmlContent에 넣음
         filteredData.forEach(item => {
           htmlContent += `
             <li data-category="${item.category}">
