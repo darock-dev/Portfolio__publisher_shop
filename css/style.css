@@ -236,12 +236,12 @@ button {
   color: #000;
   font-weight: 500;
 }
-.prod-item {
+.prod-item-wrap {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
-.prod-item li {
+.prod-item-wrap li {
   display: flex;
   justify-content: center;
   width: calc((100% - 90px) / 4);

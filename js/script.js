@@ -22,21 +22,50 @@ const prodData = [
 ]
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 모든 제품 데이터를 상품 리스트에 뿌리기
-  const prodItemWrap = document.querySelector('.prod-item');
-  let prodHtmlContent = '';
+  const prodItemWrap = document.querySelector('.prod-item-wrap');
+  const prodTabMenuItems = document.querySelectorAll('.prod-tabmenu-item');
 
-  prodData.forEach(item => {
-    prodHtmlContent += `
-      <li data-category="${item.category}">
-        <a href="#">
-          <img src="${item.img}" alt="${item.name}">
-          <div class="prod-color" style="background-color: ${item.color}"></div>
-          <div class="prod-name">${item.name}</div>
-          <div class="prod-price">${item.price}원</div>
-        </a>
-      </li>
-    `
+  prodTabMenuItems.forEach(menu => {
+    menu.addEventListener('click', () => {
+      // 활성화 active 클래스 추가/제거
+      prodTabMenuItems.forEach(item => {
+        item.classList.remove('active');
+      });
+      menu.classList.add('active');
+
+      // 클릭한 탭메뉴의 data-category 속성에 따라 데이터 필터링
+      const selectedCategory = menu.getAttribute('data-category');
+      console.log(selectedCategory);
+
+      if (selectedCategory) {
+        let filteredData = [];
+        
+        if(selectedCategory === 'all') {
+          filteredData = prodData;
+        } else {
+          filteredData = prodData.filter(item => item.category === selectedCategory);
+        }
+  
+        let htmlContent = '';
+  
+        filteredData.forEach(item => {
+          htmlContent += `
+            <li data-category="${item.category}">
+              <a href="#">
+                <img src="${item.img}" alt="${item.name}">
+                <div class="prod-color" style="background-color: ${item.color}"></div>
+                <div class="prod-name">${item.name}</div>
+                <div class="prod-price">${item.price}원</div>
+              </a>
+            </li>
+          `
+        });
+  
+        prodItemWrap.innerHTML = htmlContent;
+      }
+    });
   });
-  prodItemWrap.innerHTML = prodHtmlContent;
+
+  // 기본적으로 전체가 클릭되도록 하기
+  document.querySelector('.prod-tabmenu-item[data-category="all"]').click();
 });
