@@ -58,20 +58,27 @@ const bestItemSwiper = new Swiper('.best-item-swiper', {
 document.addEventListener('DOMContentLoaded', () => {
   const prodItemWrap = document.querySelector('.prod-item-wrap');
   const prodTabMenuItems = document.querySelectorAll('.prod-tabmenu-item');
+  const allCategoryButtons = document.querySelectorAll('[data-category]');
 
-  prodTabMenuItems.forEach(menu => {
-    menu.addEventListener('click', () => {
-      // 활성화 active 클래스 추가/제거
-      prodTabMenuItems.forEach(item => {
-        item.classList.remove('active');
-      });
-      menu.classList.add('active');
-
-      // 클릭한 탭메뉴의 data-category 속성에 따라 데이터 필터링
-      const selectedCategory = menu.getAttribute('data-category');
-      console.log(selectedCategory);
+  // 모든 data-category 속성을 가진 요소를 불러와서 순환
+  allCategoryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const selectedCategory = button.getAttribute('data-category');  // 선택된 카테고리
 
       if (selectedCategory) {
+        // 탭메뉴에서 활성화 active 클래스 제거
+        prodTabMenuItems.forEach(item => {
+          item.classList.remove('active');
+        });
+
+        // 탭메뉴에서 선택된 카테고리 속성을 가진 요소를 변수에 담음
+        const targetTab = document.querySelector(`.prod-tabmenu-item[data-category="${selectedCategory}"]`);
+        if (targetTab) {
+          // 해당 변수에 avtice 클래스 추가
+          targetTab.classList.add('active');
+        }
+
+        // 필터링된 상품 데이터를 담을 변수
         let filteredData = [];
         
         if(selectedCategory === 'all') {
@@ -100,6 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 기본적으로 전체가 클릭되도록 하기
+  // 기본적으로 전체 카테고리가 클릭되도록 하기
   document.querySelector('.prod-tabmenu-item[data-category="all"]').click();
 });
