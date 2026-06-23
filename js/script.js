@@ -1,4 +1,4 @@
-// 제품 데이터
+// 상품 데이터
 const prodData = [
   {id: 1, category: 'fabric', img: '../images/product/f_01.png', color: 'white', name: '부드러운 이불', price: '40,000'},
   {id: 2, category: 'fabric', img: '../images/product/f_02.png', color: 'ivory', name: '포근한 베개', price: '27,000'},
@@ -21,6 +21,23 @@ const prodData = [
   {id: 19, category: 'storage', img: '../images/product/s_05.png', color: 'ivory', name: '수건 바구니', price: '10,000'},
 ]
 
+/**
+ * 인기상품 Swiper
+ */
+const bestItemSwiper = new Swiper('.best-item-swiper', {
+  direction: 'horizontal',
+  loop: false,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  slidesPerView: 5,
+  spaceBetween: 30
+});
+
+/**
+ * 상품 목록 표시
+ */
 document.addEventListener('DOMContentLoaded', () => {
   const prodItemWrap = document.querySelector('.prod-item-wrap');
   const prodTabMenuItems = document.querySelectorAll('.prod-tabmenu-item');

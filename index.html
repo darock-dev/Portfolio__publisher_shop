@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/font.css">
   <link rel="stylesheet" href="./css/style.css">
+  <!-- Swiper 플러그인 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
 </head>
 <body>
   <!-- header -->
@@ -29,8 +31,8 @@
         </nav>
       </div>
       <div class="header-right">
-        <a href="#"><img src="./images/icon/cart-outline.png" alt="장바구니" /></a>
-        <a href="#"><img src="./images/icon/person.png" alt="마이페이지"/></a>
+        <a href="javascript:;"><img src="./images/icon/cart-outline.png" alt="장바구니" /></a>
+        <a href="javascript:;"><img src="./images/icon/person.png" alt="마이페이지"/></a>
       </div>
     </div>
   </header>
@@ -71,83 +73,68 @@
       </ul>
     </section>
 
-    <!-- best item (TODO: Swiper 슬라이드 적용)  -->
+    <!-- best item -->
     <section class="section" id="best-item-sec">
       <div class="section-inner">
         <div class="best-item-title">인기상품을 둘러보세요</div>
-        <div>
-          <ul class="best-item">
-            <li>
-              <a href="#">
-                <img src="./images/product/p_05.png" alt="포근한 침대">
-                <div class="prod-name">포근한 침대</div>
-                <div class="prod-price">80,000원</div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="./images/product/m_01.png" alt="심플한 필통">
-                <div class="prod-name">심플한 필통</div>
-                <div class="prod-price">6,000원</div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="./images/product/g_02.png" alt="정리에 좋은 책장">
-                <div class="prod-name">정리에 좋은 책장</div>
-                <div class="prod-price">120,000원</div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="./images/product/p_03.png" alt="포근한 쇼파">
-                <div class="prod-name">포근한 쇼파</div>
-                <div class="prod-price">360,000원</div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="./images/product/g_04.png" alt="편안한 의자">
-                <div class="prod-name">편안한 의자</div>
-                <div class="prod-price">80,000원</div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="./images/product/p_05.png" alt="포근한 침대">
-                <div class="prod-name">포근한 침대</div>
-                <div class="prod-price">80,000원</div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="./images/product/m_01.png" alt="심플한 필통">
-                <div class="prod-name">심플한 필통</div>
-                <div class="prod-price">6,000원</div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="./images/product/g_02.png" alt="정리에 좋은 책장">
-                <div class="prod-name">정리에 좋은 책장</div>
-                <div class="prod-price">120,000원</div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="./images/product/p_03.png" alt="포근한 쇼파">
-                <div class="prod-name">포근한 쇼파</div>
-                <div class="prod-price">360,000원</div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="./images/product/g_04.png" alt="편안한 의자">
-                <div class="prod-name">편안한 의자</div>
-                <div class="prod-price">80,000원</div>
-              </a>
-            </li>
-          </ul>
+        <div class="">
+          <div class="swiper best-item-swiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <a href="javascript:;">
+                  <img src="./images/product/f_01.png" alt="부드러운 이불">
+                  <div class="prod-name">부드러운 이불</div>
+                  <div class="prod-price">40,000원</div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:;">
+                  <img src="./images/product/f_02.png" alt="포근한 베개">
+                  <div class="prod-name">포근한 베개</div>
+                  <div class="prod-price">27,000원</div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:;">
+                  <img src="./images/product/f_03.png" alt="푹신한 쿠션">
+                  <div class="prod-name">푹신한 쿠션</div>
+                  <div class="prod-price">13,000원</div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:;">
+                  <img src="./images/product/f_04.png" alt="침구 세트(GRAY)">
+                  <div class="prod-name">침구 세트(GRAY)</div>
+                  <div class="prod-price">104,000원</div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:;">
+                  <img src="./images/product/f_05.png" alt="침구 세트(WHITE)">
+                  <div class="prod-name">침구 세트(WHITE)</div>
+                  <div class="prod-price">104,000원</div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:;">
+                  <img src="./images/product/f_06.png" alt="침구 세트(IVORY)">
+                  <div class="prod-name">침구 세트(IVORY)</div>
+                  <div class="prod-price">104,000원</div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:;">
+                  <img src="./images/product/g_01.png" alt="편안한 소파">
+                  <div class="prod-name">편안한 소파</div>
+                  <div class="prod-price">61,000원</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-button-prev best-item-swiper-prev"></div>
+            <div class="swiper-button-next best-item-swiper-next"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -230,6 +217,8 @@
     </div>
   </footer>
 
+  <!-- Swiper 플러그인 -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script src="./js/script.js"></script>
 </body>
 </html>

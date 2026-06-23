@@ -116,6 +116,13 @@ button {
   justify-content: space-between;
   gap: 20px;
 }
+.best-item-swiper {
+  width: 100%;
+  height: auto;
+}
+.best-item-swiper-prev, .best-item-swiper-next {
+  color: #000 !important;
+}
 .prod-name {
   font-size: 16px;
   color: #555;
