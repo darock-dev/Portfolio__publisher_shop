@@ -155,59 +155,90 @@
     <!-- prod list -->
     <section class="section">
       <div class="section-inner">
-        <!-- filter -->
-        <div class="filter-wrap">
-          <div class="filter-title">전체</div>
-          <div class="filter-sub-title">검색 필터 설정</div>
-          <ul class="filter-accordion">
-            <li class="accordion-item">
-              <div class="accordion-title">
-                <span>색상</span>
-                <img  src="./images/icon/add-outline.png" alt=""/>
-              </div>
-              <div class="accordion-desc">
-                <div class="color-list">
-                  <input type="checkbox" name="color" id="white" value="white" class="hidden-checkbox"/>
-                  <label class="color-option" for="white">
-                    <span>화이트</span>
-                  </label>
-                  <input type="checkbox" name="color" id="ivory" value="ivory" class="hidden-checkbox"/>
-                  <label class="color-option" for="ivory">
-                    <span>아이보리</span>
-                  </label>
-                  <input type="checkbox" name="color" id="gray" value="gray" class="hidden-checkbox"/>
-                  <label class="color-option" for="gray">
-                    <span>그레이</span>
-                  </label>
-                  <input type="checkbox" name="color" id="brown" value="brown" class="hidden-checkbox"/>
-                  <label class="color-option" for="brown">
-                    <span>브라운</span>
-                  </label>
-                  <input type="checkbox" name="color" id="clear" value="clear" class="hidden-checkbox"/>
-                  <label class="color-option" for="clear">
-                    <span>투명</span>
-                  </label>
+        <div class="prod-list-wrap">
+          <!-- filter -->
+          <div class="filter-wrap">
+            <div class="filter-title">전체</div>
+            <div class="filter-sub-title">검색 필터 설정</div>
+            <ul class="filter-accordion">
+              <li class="accordion-item">
+                <div class="accordion-title">
+                  <span>색상</span>
+                  <img  src="./images/icon/add-outline.png" alt=""/>
                 </div>
-              </div>
-            </li>
-            <li class="accordion-item">
-              <div class="accordion-title">
-                <span>가격</span>
-                <img  src="./images/icon/add-outline.png" alt=""/>
-              </div>
-              <div class="accordion-desc">
-                <input class="price-input" type="text" placeholder="최소금액"/>~<input class="price-input" type="text" placeholder="최대금액" /> 원
-              </div>
-            </li>
-          </ul>
-          <div class="filter-footer">
-            <button type="button">상품보기</button>
+                <div class="accordion-desc">
+                  <div class="color-list">
+                    <input type="checkbox" name="color" id="white" value="white" class="hidden-checkbox"/>
+                    <label class="color-option" for="white">
+                      <span>화이트</span>
+                    </label>
+                    <input type="checkbox" name="color" id="ivory" value="ivory" class="hidden-checkbox"/>
+                    <label class="color-option" for="ivory">
+                      <span>아이보리</span>
+                    </label>
+                    <input type="checkbox" name="color" id="lightgray" value="lightgray" class="hidden-checkbox"/>
+                    <label class="color-option" for="lightgray">
+                      <span>그레이</span>
+                    </label>
+                    <input type="checkbox" name="color" id="burlywood" value="burlywood" class="hidden-checkbox"/>
+                    <label class="color-option" for="burlywood">
+                      <span>브라운</span>
+                    </label>
+                  </div>
+                </div>
+              </li>
+              <li class="accordion-item">
+                <div class="accordion-title">
+                  <span>가격</span>
+                  <img  src="./images/icon/add-outline.png" alt=""/>
+                </div>
+                <div class="accordion-desc">
+                  <input class="price-input" type="text" placeholder="최소금액"/>~<input class="price-input" type="text" placeholder="최대금액" /> 원
+                </div>
+              </li>
+            </ul>
+            <div class="filter-footer">
+              <button type="button">상품보기</button>
+            </div>
           </div>
-        </div>
-
-        <!-- list -->
-        <div>
-          <ul></ul>
+          
+          <!-- prod list (TODO: 추후 JS로 나열) -->
+          <div class="prod-list">
+            <ul class="prod-item">
+              <li>
+                <a href="#">
+                  <img src="./images/product/p_05.png" alt="포근한 침대">
+                  <div class="prod-color" style="background-color: white;"></div>
+                  <div class="prod-name">포근한 침대</div>
+                  <div class="prod-price">80,000원</div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/product/p_05.png" alt="포근한 침대">
+                  <div class="prod-color" style="background-color: ivory;"></div>
+                  <div class="prod-name">포근한 침대</div>
+                  <div class="prod-price">80,000원</div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/product/p_05.png" alt="포근한 침대">
+                  <div class="prod-color" style="background-color: lightgray;"></div>
+                  <div class="prod-name">포근한 침대</div>
+                  <div class="prod-price">80,000원</div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/product/p_05.png" alt="포근한 침대">
+                  <div class="prod-color" style="background-color: burlywood;"></div>
+                  <div class="prod-name">포근한 침대</div>
+                  <div class="prod-price">80,000원</div>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>

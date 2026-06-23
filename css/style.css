@@ -126,9 +126,16 @@ button {
   margin-top: 30px;
 }
 
+/* prod-list */
+.prod-list-wrap {
+  display: flex;
+  gap: 60px;
+}
+
 /* filter */
 .filter-wrap {
-  width: 240px;
+  width: 260px;
+  flex-shrink: 0;
 }
 .filter-title {
   font-size: 40px;
@@ -205,4 +212,25 @@ button {
   padding: 20px 0;
   text-align: center;
   margin-top: 20px;
+}
+
+/* prod-list */
+.prod-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.prod-item li {
+  display: flex;
+  justify-content: center;
+  width: calc((100% - 90px) / 4);
+  flex-shrink: 0;
+}
+.prod-color {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border: 1px solid #ddd;
+  margin-top: 16px;
 }
