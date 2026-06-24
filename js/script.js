@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
             htmlContent += `
               <li data-category="${item.category}">
                 <a href="#">
-                  <img src="${item.img}" alt="${item.name}">
+                  <div class="prod-image"><img src="${item.img}" alt="${item.name}"></div>
                   <div class="prod-color" style="background-color: ${item.color}"></div>
                   <div class="prod-name">${item.name}</div>
                   <div class="prod-price">${item.price.toLocaleString()}원</div>

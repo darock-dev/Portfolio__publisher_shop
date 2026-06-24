@@ -277,6 +277,15 @@ button {
   width: calc((100% - 90px) / 4);
   flex-shrink: 0;
 }
+.prod-image {
+  width: fit-content;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+.prod-image img:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+}
 .prod-color {
   border-radius: 50%;
   width: 20px;
