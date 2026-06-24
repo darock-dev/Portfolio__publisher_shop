@@ -48,8 +48,14 @@ const bestItemSwiper = new Swiper('.best-item-swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  slidesPerView: 5,
-  spaceBetween: 30
+  slidesPerView: 2,
+  spaceBetween: 10,
+  breakpoints: {
+    768: {
+      slidesPerView: 5,
+      spaceBetween: 30
+    }
+  }
 });
 
 /**
