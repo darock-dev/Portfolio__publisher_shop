@@ -104,32 +104,63 @@ document.addEventListener('DOMContentLoaded', () => {
         // 필터링된 상품 데이터를 담을 변수
         let filteredData = [];
         
+        // 카테고리 필터링
         if(selectedCategory === 'all') {
           filteredData = prodData;
         } else {
           filteredData = prodData.filter(item => item.category === selectedCategory);
         }
+
+        // 색상 필터링
+        const checkedColors = Array.from(document.querySelectorAll('input[name=color]:checked')).map(cb => cb.value);
+        if (checkedColors.length > 0) {
+          filteredData = filteredData.filter(item => checkedColors.includes(item.color));
+        }
+
+        // 가격 필터링
+        const priceInputs = document.querySelectorAll('.price-input');
+        const minPrice = priceInputs[0].value ? priceInputs[0].value : 0;
+        const maxPrice = priceInputs[1].value ? priceInputs[1].value : Infinity;
+
+        filteredData = filteredData.filter(item => {
+          return item.price >= minPrice && item.price <= maxPrice;
+        })
   
         let htmlContent = '';
   
         // 필터링된 데이터를 htmlContent에 넣음
-        filteredData.forEach(item => {
-          htmlContent += `
-            <li data-category="${item.category}">
-              <a href="#">
-                <img src="${item.img}" alt="${item.name}">
-                <div class="prod-color" style="background-color: ${item.color}"></div>
-                <div class="prod-name">${item.name}</div>
-                <div class="prod-price">${item.price.toLocaleString()}원</div>
-              </a>
-            </li>
-          `
-        });
+        if (filteredData.length === 0 ) {
+          htmlContent = '<li class="prod-list-none">조건에 맞는 상품이 없습니다.</li>'
+        } else {
+          filteredData.forEach(item => {
+            htmlContent += `
+              <li data-category="${item.category}">
+                <a href="#">
+                  <img src="${item.img}" alt="${item.name}">
+                  <div class="prod-color" style="background-color: ${item.color}"></div>
+                  <div class="prod-name">${item.name}</div>
+                  <div class="prod-price">${item.price.toLocaleString()}원</div>
+                </a>
+              </li>
+            `
+          });
+        }
+
   
         prodItemWrap.innerHTML = htmlContent;
       }
     });
   });
+
+  // 상품보기 버튼 클릭
+  // (필터링이 카테고리 버튼 클릭시 작동중이기 때문에 참고하여 로직을 짬)
+  const filterSubmitButton = document.querySelector('.filter-footer button');
+  filterSubmitButton.addEventListener('click', () => {
+    const activeTab = document.querySelector('.prod-tabmenu-item.active');
+    if (activeTab) {
+      activeTab.click();
+    }
+  })
 
   // 기본적으로 전체 카테고리가 클릭되도록 하기
   document.querySelector('.prod-tabmenu-item[data-category="all"]').click();

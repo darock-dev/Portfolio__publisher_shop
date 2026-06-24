@@ -244,6 +244,10 @@ button {
 .prod-list {
   width: 100%;
 }
+.prod-list-none {
+  width: 100% !important;
+  padding: 160px 0px; 
+}
 .prod-tabmenu {
   width: 100%;
   padding: 20px 0;
