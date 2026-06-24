@@ -53,24 +53,19 @@ const bestItemSwiper = new Swiper('.best-item-swiper', {
 });
 
 /**
- * 검색 필터 설정
+ * 아코디언 메뉴 표시/숨김
  */
-// 아코디언 메뉴 표시/숨김
 const accordionTitles = document.querySelectorAll('.accordion-title');
 accordionTitles.forEach(title => {
   title.addEventListener('click', () => {
     const currentItem = title.parentElement;  // 선택된 아코디언메뉴의 부모요소
     const isActive = currentItem.classList.contains('active');  // 해당 부모요소에서 active 클래스가 있는지 확인
 
-    // 모든 아코디언메뉴 아이템의 active 클래스 초기화
-    const allItems = document.querySelectorAll('.accordion-item');
-    allItems.forEach(item => {
-      item.classList.remove('active');
-    });
-
-    // 선택된 아코디언 메뉴에 active 클래스가 없다면 추가
+    // 선택된 아코디언 메뉴의 Active 여부에 따라 클래스명 추가/제거
     if(!isActive) {
       currentItem.classList.add('active');
+    } else {
+      currentItem.classList.remove('active');
     }
   });
 });
