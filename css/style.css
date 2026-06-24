@@ -40,6 +40,16 @@ button, input, select, textarea {
 button {
   cursor: pointer;
 }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 
 /* section */
 .section {
@@ -254,7 +264,7 @@ button {
   padding: 20px 0;
   display: flex;
   align-items: center;
-  color: #777;
+  color: #555;
   gap: 52px;
   border-bottom: 1px solid #eaeaea;
   margin-bottom: 20px;

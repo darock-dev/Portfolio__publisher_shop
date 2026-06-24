@@ -230,7 +230,11 @@
                   <img  src="./images/icon/add-outline.png" alt=""/>
                 </div>
                 <div class="accordion-desc">
-                  <input class="price-input" type="text" placeholder="최소금액"/>~<input class="price-input" type="text" placeholder="최대금액" /> 원
+                  <label for="min-price" class="sr-only">최소 금액</label>
+                  <input class="price-input" type="text" placeholder="최소금액" id="min-price"/>
+                  ~
+                  <label for="max-price" class="sr-only">최대 금액</label>
+                  <input class="price-input" type="text" placeholder="최대금액" /> 원
                 </div>
               </li>
             </ul>
@@ -259,7 +263,7 @@
   <footer id="footer">
     <div class="footer-inner">
       <div class="footer-left">
-        <img class="footer-logo"  src="./images/logo.png"/>
+        <img class="footer-logo"  src="./images/logo.png" alt="logo"/>
       </div>
       <div class="footer-right">
         Copyrightⓒ KIM DAHEE. All Rights Reserved
